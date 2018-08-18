@@ -98,7 +98,20 @@ public class Test {
     public void checkPaixing5() {
         try {
             //1.创建待测牌组，可以不按顺序
-            List<String> stringList = Arrays.asList("一万", "一万", "一万", "一万", "二万", "三万", "六万", "六万", "七万", "八万", "六万", "六万", "七万", "八万");
+            List<String> stringList = Arrays.asList("白板" ,
+                    "发财",
+                    "红中" ,
+                    "西风",
+                    "红中",
+                    "南风" ,
+                    "红中" ,
+                    "南风",
+                    "发财" ,
+                    "南风" ,
+                    "西风" ,
+                    "西风",
+                    "白板" ,
+                    "发财");
             //2.将牌组编号化，如果不存在会抛出异常IndexOutOfBoundsException
             List<Integer> integerList = Deck.toDeckNO(stringList);
             //3.初始化对象
@@ -171,20 +184,20 @@ public class Test {
 
     public void paixu() {
         //1.创建待测牌组，可以不按顺序
-        List<String> stringList = Arrays.asList("五万",
+        List<String> stringList = Arrays.asList("一筒",
                 "二筒",
-                "一条",
+                "八筒",
+                "七筒",
                 "二筒",
-                "三条",
-                "三万",
-                "二条",
-                "七万",
-                "六条",
-                "六条",
-                "二万",
-                "六万",
+                "四筒",
                 "二筒",
-                "四万");
+                "五筒",
+                "八筒",
+                " 一筒",
+                "三筒",
+                "八筒",
+                " 七筒",
+                "七筒");
         //2.将牌组编号化，如果不存在会抛出异常IndexOutOfBoundsException
         List<Integer> integerList = Deck.toDeckNO(stringList);
         //3.排序
@@ -203,7 +216,7 @@ public class Test {
 //        test.checkPaixing3();
 //        test.checkPaixing4();
         test.checkPaixing5();
-        test.paixu();
+       // test.paixu();
         //    test.findDemo1();
 //        test.findDemo2();
     }

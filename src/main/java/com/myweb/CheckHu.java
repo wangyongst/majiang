@@ -68,7 +68,7 @@ public class CheckHu implements Callable<Map<Integer, Boolean>> {
     public BooleanSupplier isShiSanYao = () -> this.map.keySet().size() == 13 && this.map.keySet().stream().filter(a -> a / 10 == 4 || a % 10 == 9 || a % 10 == 1).count() == 13;
 
     //使用流判断是清一色的Lambda表达式，过滤每张牌必须为40以下的边牌的结果的个数是否为14张
-    public BooleanSupplier isQingYiSe = () -> this.map.keySet().stream().filter(a -> a / 10 == 4).count() == 0 && this.map.keySet().stream().mapToInt(b -> b / 10).sum() % 14 == 0;
+    public BooleanSupplier isQingYiSe = () -> this.map.keySet().stream().filter(a -> a / 10 == 1).count() == this.map.keySet().size() || this.map.keySet().stream().filter(a -> a / 10 == 2).count() == this.map.keySet().size() || this.map.keySet().stream().filter(a -> a / 10 == 3).count() == this.map.keySet().size() || this.map.keySet().stream().filter(a -> a / 10 == 4).count() == this.map.keySet().size();
 
     //使用流判断是否为3n+2牌型的Lambda表达式
     public BooleanSupplier is3n2 = () -> {
